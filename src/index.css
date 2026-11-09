@@ -1,0 +1,334 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(135deg, #f5d37c, #f3c755);
+  padding: 2rem;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  text-transform: uppercase;
+  color: #6b6bea;
+}
+
+.header p {
+  color: #6b6bea;
+  font-size: 2.4rem;
+  font-weight: 800;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.budget,
+.expenses,
+.balance {
+  background-color: #d1e9f0;
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.budget h4,
+.expenses h4,
+.balance h4 {
+  text-transform: uppercase;
+  color: #333;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+}
+
+.budget h3,
+.expenses h3,
+.balance h3 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.budget h3 {
+  color: #4f46e5;
+}
+
+.expenses h3 {
+  color: #ef4444;
+}
+
+.balance h3 {
+  color: #10b981;
+}
+
+.form-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 4rem;
+}
+
+.expense-form {
+  background-color: #adf4ad;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.expense-form h3 {
+  text-transform: uppercase;
+  text-align: center;
+  color: #014d4d;
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+label,
+input,
+select,
+button {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #014d4d;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  padding: 1rem;
+  border-radius: 0.8rem;
+  color: #4f46e5;
+  font-size: 1.4rem;
+  border: 1px solid #ddd;
+  outline: none;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+
+input::placeholder {
+  color: #4f46e5;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* Opt-in the select and its popup picker to custom styling */
+.modern-select,
+.modern-select::picker(select) {
+  appearance: base-select;
+}
+
+/* Style the main button */
+.modern-select {
+  padding: 0.8rem 1.2rem;
+  width: 100%;
+  border: 1px solid #ddd;
+  color: #4f46e5;
+  border-radius: 0.8rem;
+  background-color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: space-between;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* Style the dropdown listbox when it pops open */
+.modern-select::picker(select) {
+  background-color: #756ef6;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 0.6rem;
+  border: none;
+}
+
+/* Style select on focus */
+.modern-select:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* Style the individual option rows */
+.modern-select option {
+  padding: 0.9rem;
+  color: #fff;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+
+/* Style options on focus */
+.modern-select option:focus {
+  outline: none;
+}
+
+/* Style options on hover */
+.modern-select option:hover {
+  background-color: #034ec6;
+}
+
+.expense-form button {
+  background-color: #4f46e5;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
+}
+
+.expense-form button:hover {
+  background-color: #3b3abf;
+  transform: translateY(-1px);
+}
+
+.expense-form button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.expense-list {
+  background-color: #f6f168;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-header h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #446cef;
+}
+
+/* Opt-in the select and its popup picker to custom styling */
+.list-select,
+.list-select::picker(select) {
+  appearance: base-select;
+}
+
+.list-select {
+  padding: 0.5rem 1rem;
+  width: 40%;
+  outline: none;
+  border: 1px solid #ddd;
+  color: #4f46e5;
+  border-radius: 0.8rem;
+  background-color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: space-between;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* Style the dropdown listbox when it pops open */
+.list-select::picker(select) {
+  background-color: #756ef6;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 0.6rem;
+  border: none;
+}
+
+/* Style the individual option rows */
+.list-select option {
+  padding: 0.9rem;
+  color: #fff;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+
+/* Style options on focus */
+.list-select option:focus {
+  outline: none;
+}
+
+/* Style options on hover */
+.list-select option:hover {
+  background-color: #034ec6;
+}
+
+.list ul {
+  list-style: none;
+}
+
+.expense-item {
+  color: #034ec6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+.expense-item button {
+  width: 20%;
+  height: 100%;
+  background-color: #f13f5a;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transform: translateY(3px);
+  transition: background-color 0.3s;
+}
+
+.expense-item button:hover {
+  background-color: #cb1b35;
+}
